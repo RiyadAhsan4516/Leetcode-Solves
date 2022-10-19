@@ -755,7 +755,7 @@ var deleteNode = function (node) {
 
 var intersect = function (nums1, nums2) {
   let numslist = {};
-  let query = nums1.length <= nums2.length ? nums1 : nums2;
+  let query = nums1.length >= nums2.length ? nums1 : nums2;
   let compare = query != nums1 ? nums1 : nums2;
   query.forEach((el) => {
     if (numslist[el] != undefined) numslist[el] += 1;
@@ -764,11 +764,16 @@ var intersect = function (nums1, nums2) {
   const result = [];
   for (let i = 0; i < compare.length; i++) {
     if (numslist[compare[i]] != undefined) {
-      result.push(compare[i]);
+      if (numslist[compare[i]] > 0) {
+        numslist[compare[i]] -= 1;
+        result.push(compare[i]);
+      }
     }
   }
-  console.log(numslist);
-  console.log(result);
+  return result;
 };
 
-intersect([1, 2, 2, 1], [2, 2, 2]);
+// console.log(intersect([1, 2, 2, 1], [2, 2, 2, 2, 2]));
+// take a hashtable and save the number of counts it is appearing in the array.
+// Decrease the count every time a common is found in the other array and push it into the result.
+// Once the count hits 0 do not push any more because the maximum number of repetations are reached.
