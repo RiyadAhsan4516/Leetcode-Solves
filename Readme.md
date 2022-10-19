@@ -1,5 +1,7 @@
 # Problem-list
 
+## The serials are set according to the original serials in leetcode
+
 26\. Remove Duplicates from Sorted Array
 
 217\. Contains Duplicates
