@@ -848,4 +848,4 @@ var maxArea = function (height) {
   return max;
 };
 
-console.log(maxArea([1, 1]));
+// console.log(maxArea([1, 1]));
