@@ -1,6 +1,6 @@
 # Problem-list
 
-26. Remove Duplicates from Sorted Array
+// 26. Remove Duplicates from Sorted Array
 217. Contains Duplicates
 169. Majority element
 838. Push Dominoes
