@@ -794,4 +794,39 @@ var maxProfit = function (prices) {
   return profit;
 };
 
-console.log(maxProfit([7, 6, 4, 3, 1]));
+// console.log(maxProfit([7, 6, 4, 3, 1]));
+
+//-----------------------------------------------------------------------------------------------------------------------
+
+// 104. Maximum Depth of Binary Tree
+
+// iterative: Apply bfs and find the length of the result array
+var maxDepth = function (root) {
+  if (!root) return 0;
+  let queue = [root];
+  const result = [];
+  while (queue.length > 0) {
+    const newQueue = [];
+    const level = [];
+    for (node of queue) {
+      level.push(node.val);
+      if (node.left) newQueue.push(node.left);
+      if (node.right) newQueue.push(node.right);
+    }
+    queue = newQueue;
+    result.push(level);
+  }
+  return result.length;
+};
+
+// recursive:
+var maxDepthrecursive = function (root) {
+  if (!root) return 0;
+  let maxleft = maxDepthrecursive(root.left);
+  let maxright = maxDepthrecursive(root.right);
+  return Math.max(maxleft, maxright) + 1;
+};
+
+// let head = createTree([1, null, 2]);
+// console.log(maxDepth(head));
+// console.log(maxDepthrecursive(head));
