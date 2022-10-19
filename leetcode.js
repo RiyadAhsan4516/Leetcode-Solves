@@ -830,3 +830,22 @@ var maxDepthrecursive = function (root) {
 // let head = createTree([1, null, 2]);
 // console.log(maxDepth(head));
 // console.log(maxDepthrecursive(head));
+
+//-----------------------------------------------------------------------------------------------------------------------
+
+// 11. Container With Most Water
+
+var maxArea = function (height) {
+  if (!height) return 0;
+  let end = height.length - 1;
+  let start = 0;
+  let max = 0;
+  while (start != end) {
+    let length = Math.min(height[start], height[end]);
+    max = Math.max(max, length * (end - start));
+    length == height[end] ? end-- : start++;
+  }
+  return max;
+};
+
+console.log(maxArea([1, 1]));
