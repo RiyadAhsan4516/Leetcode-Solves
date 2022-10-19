@@ -777,3 +777,8 @@ var intersect = function (nums1, nums2) {
 // take a hashtable and save the number of counts it is appearing in the array.
 // Decrease the count every time a common is found in the other array and push it into the result.
 // Once the count hits 0 do not push any more because the maximum number of repetations are reached.
+
+//-----------------------------------------------------------------------------------------------------------------------
+
+// 121. Best Time to Buy and Sell Stock
+// (not yet solved)
