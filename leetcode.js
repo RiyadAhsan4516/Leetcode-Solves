@@ -729,7 +729,7 @@ var maxSubArray = function (nums) {
   return sum;
 };
 
-console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
+// console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
 
 // 2 questions to be kept in mind here:
 // for start: is it profitable to start from the current index? or extending to this index?
@@ -750,3 +750,25 @@ var deleteNode = function (node) {
 };
 
 //-----------------------------------------------------------------------------------------------------------------------
+
+// 350. Intersection of Two Arrays II
+
+var intersect = function (nums1, nums2) {
+  let numslist = {};
+  let query = nums1.length <= nums2.length ? nums1 : nums2;
+  let compare = query != nums1 ? nums1 : nums2;
+  query.forEach((el) => {
+    if (numslist[el] != undefined) numslist[el] += 1;
+    else numslist[el] = 1;
+  });
+  const result = [];
+  for (let i = 0; i < compare.length; i++) {
+    if (numslist[compare[i]] != undefined) {
+      result.push(compare[i]);
+    }
+  }
+  console.log(numslist);
+  console.log(result);
+};
+
+intersect([1, 2, 2, 1], [2, 2, 2]);
