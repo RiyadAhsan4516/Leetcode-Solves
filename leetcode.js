@@ -849,3 +849,23 @@ var maxArea = function (height) {
 };
 
 // console.log(maxArea([1, 1]));
+
+//-----------------------------------------------------------------------------------------------------------------------
+
+// 1556. Thousand Separator
+
+var thousandSeparator = function (val) {
+  val = `${val}`.split("");
+  let count = 1;
+  for (let i = val.length - 1; i >= 0; i--) {
+    if (count == 3 && val[i - 1]) {
+      val.splice(i, 0, ".");
+      count = 1;
+    } else {
+      count++;
+    }
+  }
+  return val.join("");
+};
+
+console.log(thousandSeparator(1435));

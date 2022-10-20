@@ -63,3 +63,5 @@
 104\. Maximum Depth of Binary Tree
 
 11\. Container With Most Water
+
+1556\. Thousand Separator
