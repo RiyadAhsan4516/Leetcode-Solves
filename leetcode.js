@@ -868,4 +868,4 @@ var thousandSeparator = function (val) {
   return val.join("");
 };
 
-console.log(thousandSeparator(1435));
+// console.log(thousandSeparator(1435));
