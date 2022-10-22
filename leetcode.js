@@ -883,27 +883,3 @@ var searchBST = function (root, val) {
   }
   return null;
 };
-
-const head = {
-  val: 4,
-  left: {
-    val: 2,
-    left: {
-      val: 1,
-      left: null,
-      right: null,
-    },
-    right: {
-      val: 3,
-      left: null,
-      right: null,
-    },
-  },
-  right: {
-    val: 7,
-    left: null,
-    right: null,
-  },
-};
-
-console.log(searchBST(head, 14));
