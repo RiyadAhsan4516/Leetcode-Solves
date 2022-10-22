@@ -869,3 +869,41 @@ var thousandSeparator = function (val) {
 };
 
 // console.log(thousandSeparator(1435));
+
+//-----------------------------------------------------------------------------------------------------------------------
+
+// 700. Search in a Binary Search Tree
+
+var searchBST = function (root, val) {
+  let dummy = root;
+  while (dummy) {
+    if (val < dummy.val) dummy = dummy.left;
+    else if (val > dummy.val) dummy = dummy.right;
+    else return dummy;
+  }
+  return null;
+};
+
+const head = {
+  val: 4,
+  left: {
+    val: 2,
+    left: {
+      val: 1,
+      left: null,
+      right: null,
+    },
+    right: {
+      val: 3,
+      left: null,
+      right: null,
+    },
+  },
+  right: {
+    val: 7,
+    left: null,
+    right: null,
+  },
+};
+
+console.log(searchBST(head, 14));
