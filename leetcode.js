@@ -902,4 +902,4 @@ var containsNearbyDuplicate = function (nums, k) {
   return false;
 };
 
-console.log(containsNearbyDuplicate([1, 0, 1, 1], 1));
+// console.log(containsNearbyDuplicate([1, 0, 1, 1], 1));
