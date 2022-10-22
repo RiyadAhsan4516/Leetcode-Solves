@@ -883,3 +883,23 @@ var searchBST = function (root, val) {
   }
   return null;
 };
+
+//-----------------------------------------------------------------------------------------------------------------------
+
+// 219. Contains Duplicate II
+
+var containsNearbyDuplicate = function (nums, k) {
+  if (nums.length <= 1) return false;
+  let table = {};
+  for (let i = 0; i < nums.length; i++) {
+    if (table[nums[i]] == undefined) table[nums[i]] = i;
+    else {
+      let sum = Math.abs(table[nums[i]] - i);
+      if (sum <= k) return true;
+      else table[nums[i]] = i;
+    }
+  }
+  return false;
+};
+
+console.log(containsNearbyDuplicate([1, 0, 1, 1], 1));
