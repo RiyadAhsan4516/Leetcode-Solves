@@ -69,3 +69,5 @@
 700\. Search in a Binary Search Tree
 
 219\. Contains Duplicate II
+
+387\. First Unique Character in a String

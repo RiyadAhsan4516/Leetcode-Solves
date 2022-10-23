@@ -903,3 +903,20 @@ var containsNearbyDuplicate = function (nums, k) {
 };
 
 // console.log(containsNearbyDuplicate([1, 0, 1, 1], 1));219. Contains Duplicate II
+
+//-----------------------------------------------------------------------------------------------------------------------
+
+// 387. First Unique Character in a String
+
+var firstUniqChar = function (s) {
+  let table = {};
+  for (let i = 0; i < s.length; i++) {
+    if (table[s[i]] != undefined) table[s[i]] = Infinity;
+    else table[s[i]] = i;
+  }
+  let result = Math.min(...Object.values(table));
+  if (result == Infinity) return -1;
+  else return result;
+};
+
+// console.log(firstUniqChar("loveleetcode"));
