@@ -734,7 +734,8 @@ var maxSubArray = function (nums) {
 
 // 2 questions to be kept in mind here:
 // for start: is it profitable to start from the current index? or extending to this index?
-// for sum: okay we saw that extending gives us a value that is greater than the current index. but after extending does the sum become more than it was?
+// for sum: okay we saw that extending gives us a value that is greater than the current index.
+// but after extending does the sum become more than it was?
 
 //-----------------------------------------------------------------------------------------------------------------------
 
