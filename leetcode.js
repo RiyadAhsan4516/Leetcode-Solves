@@ -920,3 +920,34 @@ var firstUniqChar = function (s) {
 };
 
 // console.log(firstUniqChar("loveleetcode"));
+
+//-----------------------------------------------------------------------------------------------------------------------
+
+// 383. Ransom Note
+
+var canConstruct = function (ransomNote, magazine) {
+  let table = {};
+  let ransom = ransomNote.split("");
+  for (let i = 0; i < ransom.length; i++) {
+    if (table[ransom[i]] != undefined) {
+      table[ransom[i]] += 1;
+    } else {
+      table[ransom[i]] = 1;
+    }
+  }
+  for (let i = 0; i < magazine.length; i++) {
+    if (table[magazine[i]] != undefined) {
+      if (table[magazine[i]] > 1) {
+        table[magazine[i]] -= 1;
+        ransom.pop();
+      } else {
+        delete table[magazine[i]];
+        ransom.pop();
+      }
+    }
+  }
+  if (ransom.length > 0) return false;
+  else return true;
+};
+
+// console.log(canConstruct("aa", "aab"));
