@@ -903,7 +903,7 @@ var containsNearbyDuplicate = function (nums, k) {
   return false;
 };
 
-// console.log(containsNearbyDuplicate([1, 0, 1, 1], 1));219. Contains Duplicate II
+// console.log(containsNearbyDuplicate([1, 0, 1, 1], 1));
 
 //-----------------------------------------------------------------------------------------------------------------------
 
