@@ -972,4 +972,4 @@ var singleNumber = function (nums) {
   else return val;
 };
 
-console.log(singleNumber([40, 40, 5, 5, 26, 3, 3, 2, 2]));
+// console.log(singleNumber([40, 40, 5, 5, 26, 3, 3, 2, 2]));
