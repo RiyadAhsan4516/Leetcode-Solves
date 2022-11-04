@@ -952,3 +952,24 @@ var canConstruct = function (ransomNote, magazine) {
 };
 
 // console.log(canConstruct("aa", "aab"));
+
+//-----------------------------------------------------------------------------------------------------------------------
+
+// 136. Single Number
+
+var singleNumber = function (nums) {
+  nums.sort();
+  let val;
+  for (let i = 0; i < nums.length - 1; i++) {
+    if (nums[i] == nums[i + 1]) {
+      i++;
+    } else {
+      val = nums[i];
+      break;
+    }
+  }
+  if (val == undefined) return nums[nums.length - 1];
+  else return val;
+};
+
+console.log(singleNumber([40, 40, 5, 5, 26, 3, 3, 2, 2]));
