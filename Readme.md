@@ -73,3 +73,9 @@
 387\. First Unique Character in a String
 
 383\. Ransom Note
+
+136\. Single Number
+
+15\. 3Sum (leetcode.py)
+
+18\. 4Sum (leetcode.py)
