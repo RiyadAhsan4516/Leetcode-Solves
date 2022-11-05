@@ -973,3 +973,29 @@ var singleNumber = function (nums) {
 };
 
 // console.log(singleNumber([40, 40, 5, 5, 26, 3, 3, 2, 2]));
+
+//-----------------------------------------------------------------------------------------------------------------------
+
+// 75. Sort Colors
+
+var sortColors = function (nums) {
+  if (nums.length === 0) return nums;
+  let table = {};
+  nums.forEach((el) => {
+    if (table[el] != undefined) table[el] += 1;
+    else table[el] = 1;
+  });
+  let x = [2, 1, 0];
+  let index = 0;
+  while (x.length > 0) {
+    if (table[x[x.length - 1]] === 0 || table[x[x.length - 1]] == undefined)
+      x.pop();
+    else {
+      nums[index] = x[x.length - 1];
+      index++;
+      table[x[x.length - 1]] -= 1;
+    }
+  }
+};
+
+// console.log(sortColors([2, 0, 2, 1, 1, 0]));
