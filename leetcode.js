@@ -999,3 +999,30 @@ var sortColors = function (nums) {
 };
 
 // console.log(sortColors([2, 0, 2, 1, 1, 0]));
+
+//-----------------------------------------------------------------------------------------------------------------------
+
+// 290. Word Pattern
+
+var wordPattern = function (pattern, s) {
+  let p = pattern.split("");
+  let q = s.split(" ");
+  if (p.length != q.length) return false;
+  let table1 = {};
+  let table2 = {};
+  for (let i = 0; i < p.length; i++) {
+    if (table1[q[i]] != undefined) {
+      if (table1[q[i]] != p[i]) return false;
+      else continue;
+    } else {
+      if (table2[p[i]] != undefined) return false;
+      else {
+        table1[q[i]] = p[i];
+        table2[p[i]] = q[i];
+      }
+    }
+  }
+  return true;
+};
+
+// console.log(wordPattern("abba", "dog cat cat dog"));
